@@ -295,7 +295,7 @@ document.getElementById('compress').addEventListener('click', async () => {
     formData.append('level', level);
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/compress', {
+       const response = await fetch('https://pdf-compressor.onrender.com/compress', {
             method: 'POST',
             body: formData
         });
