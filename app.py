@@ -31,6 +31,10 @@ def compress_pdf(input_path, output_path, level):
     ] + setting[1:]
 
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    
+    if result.returncode != 0:
+        print("Ghostscript Error:", result.stderr.decode())
+
     return result.returncode == 0
 
 @app.route('/compress', methods=['POST'])
