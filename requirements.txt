@@ -1,3 +1,4 @@
 Flask
 Flask-CORS
 PyMuPDF
+pip install flask-cors
