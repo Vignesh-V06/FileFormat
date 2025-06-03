@@ -5,17 +5,16 @@ import os
 import tempfile
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # ✅ Enable CORS for all origins
 
-GS_PATH = r"C:\Program Files\gs\gs10.05.1\bin\gswin64c.exe"  # Update this to your gswin64c.exe path
+# ✅ Update this path ONLY if you run this locally. Render won't use this path.
+GS_PATH = r"C:\Program Files\gs\gs10.05.1\bin\gswin64c.exe"
 
 COMPRESSION_SETTINGS = {
     'Low': ['/screen', '-dDownsampleColorImages=true', '-dColorImageResolution=50', '-dGrayImageResolution=50', '-dMonoImageResolution=50'],
     'Medium': ['/ebook', '-dDownsampleColorImages=true', '-dColorImageResolution=100', '-dGrayImageResolution=100', '-dMonoImageResolution=100'],
     'High': ['/printer', '-dDownsampleColorImages=true', '-dColorImageResolution=300', '-dGrayImageResolution=300', '-dMonoImageResolution=300']
 }
-
-
 
 def compress_pdf(input_path, output_path, level):
     setting = COMPRESSION_SETTINGS.get(level, ['/ebook'])
@@ -31,7 +30,6 @@ def compress_pdf(input_path, output_path, level):
         input_path
     ] + setting[1:]
 
-
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return result.returncode == 0
 
@@ -39,7 +37,7 @@ def compress_pdf(input_path, output_path, level):
 def compress():
     if 'file' not in request.files or 'level' not in request.form:
         return jsonify({'error': 'File and level required'}), 400
-    
+
     file = request.files['file']
     level = request.form['level']
 
@@ -50,11 +48,11 @@ def compress():
         file.save(input_temp.name)
 
     output_temp = tempfile.NamedTemporaryFile(delete=False, suffix='.pdf')
-    output_temp.close()  # We'll write to this file via Ghostscript
+    output_temp.close()
 
     success = compress_pdf(input_temp.name, output_temp.name, level)
 
-    os.unlink(input_temp.name)  # remove input temp file
+    os.unlink(input_temp.name)
 
     if not success:
         os.unlink(output_temp.name)
@@ -63,6 +61,5 @@ def compress():
     return send_file(output_temp.name, as_attachment=True, download_name='compressed.pdf', mimetype='application/pdf')
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use Render-provided port
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-
