@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)  # ✅ Enable CORS for all origins
 
 # ✅ Update this path ONLY if you run this locally. Render won't use this path.
-GS_PATH = r"C:\Program Files\gs\gs10.05.1\bin\gswin64c.exe"
+GS_PATH ="gs"
 
 COMPRESSION_SETTINGS = {
     'Low': ['/screen', '-dDownsampleColorImages=true', '-dColorImageResolution=50', '-dGrayImageResolution=50', '-dMonoImageResolution=50'],
