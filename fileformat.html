@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Format</title>
+    <link rel="stylesheet" href="fileformat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="fileformatlogo.png">
+        <div class="midContainer">
+            <div class="nav" id="Products">
+                <a href="#" class="top">Products</a>
+                <div class="dropdown" id="product-dropdown">
+                    <div class="col">
+                        <h5>Word Processing</h5>
+                        <p>File Format Apps</p>
+                        <h5>PDF</h5>
+                        <p>File Format Apps</p>
+                        <h5>Compress</h5>
+                        <p>File Format Apps</p>
+                        <h5>3D</h5>
+                        <p>File Format Apps</p>
+                    </div>
+                    <div class="col">
+                        <h5>Spreadsheet</h5>
+                        <p>File Format Apps</p>
+                        <h5>Email</h5>
+                        <p>File Format Apps</p>
+                        <h5>Image</h5>
+                        <p>File Format Apps</p>
+                    </div>
+                    <div class="col">
+                        <h5>Presentation</h5>
+                        <p>File Format Apps</p>
+                        <h5>Diagram</h5>
+                        <p>File Format Apps</p>
+                        <h5>Barcode</h5>
+                        <p>File Format Apps</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav" id="support">
+                <a href="#" class="top">Support</a>
+                <div class="dropdown1" id="support-dropdown">
+                    <a href="#">Free Support</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Knowledge Base</a>
+                    <a href="#">Status</a>
+                </div>
+            </div>
+            <div class="nav" id="website">
+                <a href="#" class="top">Websites</a>
+                <div class="dropdown1" id="website-dropdown">
+                    <a href="#">openize.com</a>
+                    <a href="#">fileformat.com</a>
+                    <a href="#">fileformat.app</a>
+                    <a href="#">fileformat.ai</a>
+                    <a href="#">documentprocessing.com</a>
+                </div>
+            </div>
+            <div class="nav" id="about">
+                <a href="#" class="top">About</a>
+                <div class="dropdown1" id="about-dropdown">
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Legal</a>
+                </div>
+            </div>
+        </div>
+        <div class="lang">
+            <button id="lang">
+                en <ion-icon style="color: rgb(39, 104, 235);" name="chevron-down-outline"></ion-icon>
+                <div class="mul" id="mul">
+                    <p>Afrikaans</p>
+                    <p>Flipino</p>
+                    <p>Français</p>
+                    <p>English</p>
+                    <p>हिंदी</p>
+                    <p>Español</p>
+                    <p> தமிழ்</p>
+                    <p>Deutsch</p>
+                    <p>Indonesia</p>
+                    <p>Italiano</p>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="background-container">
+            <div class="left-decoration">
+                <div class="dot-grid"></div>
+                <div class="circle-overlay"></div>
+            </div>
+
+            <div class="main">
+                <h1>Reduce PPT File Size Online for Free</h1>
+                <h4>Easily and quickly compress and optimize PPT files.</h4>
+                <p class="p">
+                    Powered by <a href="#" class="click">aspose.com</a> and
+                    <a href="#" class="click">aspose.cloud</a>
+                </p>
+
+                <div class="upload">
+                    <input type="file" id="fileInput" style="display: none;" accept=".pdf" multiple/>
+                    <button id="uploadBtn"class="upload-file"><ion-icon name="add-outline" style="font-size: 28px;"></ion-icon>
+                        Drop or upload your
+                        files</button>
+                    <div class="upload-form">
+                        <button id="dropbox" class="upload-btn" title="Upload from Dropbox"><ion-icon
+                                name="logo-dropbox" style="font-size: 20px;"></ion-icon></button>
+                        <button id="gdrive" class="upload-btn" title="Upload from gDrive"><ion-icon name="logo-chrome"
+                                style="font-size: 20px;"></ion-icon></button>
+                        <button id="url" class="upload-btn" title="Upload from URL"><ion-icon name="link-outline"
+                                style="font-size: 20px;"></ion-icon></button>
+                    </div>
+                </div>
+                <p class="p1">By uploading your files or using our service you agree with our <a class="click"
+                        href="#">Terms of
+                        Service</a> and <a class="click" href="#">Privacy Policy</a>.</p>
+                <h4 id="pp">We've already processed 12412 files with a total size of 151316 Mbytes. <a class="click"
+                        href="#">Click
+                        here</a> for further details.</h4>
+            </div>
+            <div class="dot-grid1"></div>
+            <p id="fileName"></p>
+
+        </div>
+        <div class="tool">
+            <div class="floating-icons">
+                <button class="arrow" id="togglePanel" title="Show Features"><ion-icon
+                        name="chevron-back-outline"></ion-icon></button>
+                <div class="separator"></div>
+                <button class="icon"><ion-icon name="document-attach-outline"></ion-icon></button>
+                <div class="no"></div>
+                <div class="separator"></div>
+                <button id="trash" class="icon" title="Clear List"><ion-icon name="trash-outline"></ion-icon></button>
+            </div>
+            <div class="compression" id="slidePanel">
+                <div class="head1">
+                    <h5>Supported formats: PDF,DOC,DOCX,XLSX,PPTX</h5>
+                    <h5>TEX,HTML and others</h5>
+                    <div class="symbols">
+                        <button class="sym" id="plus" title="Add more files"><ion-icon name="add" style="font-size: 25px;"></ion-icon></button>
+                        <button class="sym" id="sort" title="Sort file list by title"><ion-icon name="funnel"
+                                style="font-size: 20px;"></ion-icon></button>
+                        <button id="dropbox" class="upload-btn" title="Upload from Dropbox"><ion-icon
+                                name="logo-dropbox" style="font-size: 20px;"></ion-icon></button>
+                        <button id="gdrive" class="upload-btn" title="Upload from gDrive"><ion-icon name="logo-chrome"
+                                style="font-size: 20px;"></ion-icon></button>
+                        <button id="url" class="upload-btn" title="Upload from URL"><ion-icon name="link-outline"
+                                style="font-size: 20px;"></ion-icon></button>
+                    </div>
+                </div>
+                <div class="file-list" >
+                </div>
+
+                <div class="foot1">
+                    <a href="#" id="trash1">Clear List</a>
+                    <h5>Compression level</h5>
+                    <div class="radio">
+                        <label><input type="radio" name="level" class="radio" value="Low"> Low</label>
+                        <label><input type="radio" name="level" class="radio" value="Medium"> Medium</label>
+                        <label><input type="radio" name="level" class="radio" value="High"> High</label>
+
+                    </div>
+                    <button id="compress">
+                        <span class="btn-content">
+                            <span>COMPRESS</span>
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="descrption">
+            <p id="overview">overview</p>
+            <h2>Compress PPT file to reduce the size of documents by optimizing contents</h2>
+            <p>Our PPT compressor allows you to compress several PPT file online for free. Compress PPT or any other supported file formats. No third-party software installation</p>
+            <p>is required. Web-based application is fast,robust,easy-to-use and absolutely free.</p>
+        </div>
+    </main>
+    <footer>
+        <button id="up" class="up"><ion-icon name="arrow-up-outline"></ion-icon></button>
+        <div class="social-media">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+        <div class="licence">
+            <p>©Openize Pty Ltd 2025. All Rights Resevered.</p>
+            <a href="#">Privacy Policy</a>
+            <div class="separator1"></div>
+            <a href="#">Terms of Service</a>
+            <div class="separator1"></div>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="fscript.js"></script>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="lb93wnnhiec92ns"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+
+
+</body>
+
+</html>
