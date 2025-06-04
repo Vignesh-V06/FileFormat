@@ -1,6 +1,4 @@
-# 📄 FileFormat - PDF Compressor Web App
-
-![Banner](https://raw.githubusercontent.com/Vignesh-V06/FileFormat/main/fileformatlogo.png)
+# <img src="https://raw.githubusercontent.com/Vignesh-V06/FileFormat/main/fileformatlogo.png" alt="Banner" width="80"/> FileFormat - PDF Compressor Web App
 
 **FileFormat** is a web-based PDF compressor tool that allows users to upload PDF files and reduce their file size using selectable compression levels. This project includes both a frontend (built with HTML, CSS, and JS) and a backend powered by Flask and Ghostscript.
 
