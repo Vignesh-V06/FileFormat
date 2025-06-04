@@ -39,23 +39,11 @@
 
 ---
 
-## 📁 Project Structure
-FileFormat/
-├── index.html
-├── styles/
-│ └── style.css
-├── scripts/
-│ └── fscript.js
-├── assets/
-│ ├── logo.png
-│ └── other images/icons
+<pre> ``` FileFormat/ ├── index.html ├── styles/ │ └── style.css ├── scripts/ │ └── fscript.js ├── assets/ │ ├── logo.png │ └── other images/icons ``` </pre>
 
 
 Backend (hosted separately):
-server/
-├── app.py
-├── requirements.txt
-├── Dockerfile
+<pre> server/ ├── app.py # Flask backend for PDF compression ├── requirements.txt # Python dependencies (Flask, Flask-CORS, etc.) ├── Dockerfile # Docker config for containerizing the server </pre>
 
 ---
 
