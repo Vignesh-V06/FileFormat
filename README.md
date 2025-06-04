@@ -40,4 +40,55 @@
 ---
 
 ## 📁 Project Structure
+FileFormat/
+├── index.html
+├── styles/
+│ └── style.css
+├── scripts/
+│ └── fscript.js
+├── assets/
+│ ├── logo.png
+│ └── other images/icons
+
+
+Backend (hosted separately):
+server/
+├── app.py
+├── requirements.txt
+├── Dockerfile
+
+---
+
+## 🧪 Running Locally
+
+### Frontend
+
+No setup needed—just open `index.html` in your browser, or serve via:
+
+```bash
+npx serve
+git clone https://github.com/vignesh-v06/FileFormat.git
+cd FileFormat/server
+pip install -r requirements.txt
+Ensure Ghostscript is installed:
+
+Windows: Set GS_PATH in app.py to the path of gswin64c.exe
+
+Linux (with Docker): Use 'gs' as GS_PATH
+
+Run the server:
+
+bash
+Copy
+Edit
+python app.py
+FROM python:3.10-slim
+
+RUN apt-get update && apt-get install -y ghostscript && apt-get clean
+
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+
+CMD ["python", "app.py"]
 
